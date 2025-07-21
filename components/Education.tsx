@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { SiCoursera, SiKaggle, SiPostman } from "react-icons/si";
 import { educationTimeline } from "@/lib/data";
