@@ -10,7 +10,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { FaGraduationCap } from "react-icons/fa";
 import { RainbowButton } from "@/components/magicui/rainbow-button";
-import { certifications } from "@/lib/data";
+
 import Head from "next/head";
 export function Education() {
     const certifications = [
