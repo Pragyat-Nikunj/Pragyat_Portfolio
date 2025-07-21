@@ -1,4 +1,4 @@
-"use client"
+"use"
 
 import React from "react";
 import { SiCoursera, SiKaggle, SiPostman } from "react-icons/si";
@@ -13,7 +13,28 @@ import { RainbowButton } from "@/components/magicui/rainbow-button";
 import { certifications } from "@/lib/data";
 import Head from "next/head";
 export function Education() {
-    
+    const certifications = [
+        {
+            name: "Postman API Fundamentals",
+            link: "https://badgr.com/public/assertions/aoe6USWTReOAow8h9n9NEQ",
+            icon: <SiPostman size={50} />,
+        },
+        {
+            name: "Intermediate Machine Learning",
+            link: "https://www.kaggle.com/learn/certification/pragyatnikunj/intermediate-machine-learning",
+            icon: <SiKaggle size={50} />,
+        },
+        {
+            name: "Google Cybersecurity Professional Certificate",
+            link: "https://www.coursera.org/account/accomplishments/professional-cert/JJ7VIK5E2DCU",
+            icon: <SiCoursera style={{ color: '#0056D2' }} size={50} />,
+        },
+        {
+            name: "Machine Learning Specialization by DeepLearning.AI",
+            link: "https://www.coursera.org/account/accomplishments/specialization/IBUQE6O1Q5Y3",
+            icon: <SiCoursera style={{ color: '#0056D2' }} size={50} />,
+        }
+    ];
     return (
         <section className="p-6 md:p-12 max-w-4xl mx-auto text-gray-300 font-[Space Grotesk] overflow-x-hidden">
             <Head>
