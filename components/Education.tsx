@@ -3,11 +3,6 @@
 import React from "react";
 import { SiCoursera, SiKaggle, SiPostman } from "react-icons/si";
 import { educationTimeline } from "@/lib/data";
-import {
-    VerticalTimeline,
-    VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 import { FaGraduationCap } from "react-icons/fa";
 import { RainbowButton } from "@/components/magicui/rainbow-button";
 
@@ -42,25 +37,20 @@ export function Education() {
             </Head>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Education</h2>
 
-            <VerticalTimeline lineColor="#0ea5e9">
+            <div className="relative border-l-2 border-cyan-500 pl-6 space-y-12">
                 {educationTimeline.map((item, index) => (
-                    <VerticalTimelineElement
-                        key={index}
-                        date={item.date}
-                        iconStyle={{ background: "#0ea5e9", color: "#fff" }}
-                        icon={<FaGraduationCap />}
-                        contentStyle={{
-                            background: "#1f2937",
-                            color: "#e5e7eb",
-                            boxShadow: "none",
-                        }}
-                        contentArrowStyle={{ borderRight: "7px solid #1f2937" }}
-                    >
-                        <h3 className="text-lg font-semibold">{item.title}</h3>
-                        <p className="text-sm whitespace-pre-line">{item.description}</p>
-                    </VerticalTimelineElement>
+                    <div key={index} className="relative">
+                        <div className="absolute -left-4 top-1.5 w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center text-white shadow-lg">
+                            <FaGraduationCap size={16} />
+                        </div>
+                        <div className="bg-gray-800 p-5 rounded-xl shadow-md hover:shadow-cyan-500/20 transition">
+                            <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                            <p className="text-sm text-gray-300 mt-1 whitespace-pre-line">{item.description}</p>
+                            <span className="block text-cyan-400 text-xs mt-2">{item.date}</span>
+                        </div>
+                    </div>
                 ))}
-            </VerticalTimeline>
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold mt-10 mb-6 text-white">Certifications</h2>
 
             <div className="grid gap-6 md:grid-cols-2">
